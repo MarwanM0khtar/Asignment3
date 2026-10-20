@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <img src="img/mmmmmm.jpeg" alt="mokhtar">
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">contact</a>
+            <a href="components.html">components</a>
+            <a href="validation.html">validation</a>
+            <a href="data.html">data table</a>
+        </div>
+    </nav>
+    <section class="info_1">
+        <h1>People Data Table</h1>
+        <br>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search by name or city..." onkeyup="filterTable()">
+            <button onclick="sortByName()">Sort by Name</button>
+            <button onclick="sortByAge()">Sort by Age</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be inserted dynamically via JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        // Array of objects
+        let people = [
+            { name: "Marwan Mokhtar", age: 20, city: "Cairo" },
+            { name: "Ahmed Ali", age: 22, city: "Alexandria" },
+            { name: "Mahmoud Hassan", age: 19, city: "Giza" },
+            { name: "Sara Mohamed", age: 21, city: "Mansoura" },
+            { name: "Youssef Ibrahim", age: 23, city: "Aswan" }
+        ];
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            data.forEach(person => {
+                const row = `<tr>
+                    <td>${person.name}</td>
+                    <td>${person.age}</td>
+                    <td>${person.city}</td>
+                </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Initial render
+        renderTable(people);
+
+        // Filter function (Search as you type without button)
+        function filterTable() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = people.filter(p => 
+                p.name.toLowerCase().includes(query) || p.city.toLowerCase().includes(query)
+            );
+            renderTable(filtered);
+        }
+
+        // Sort by Name
+        function sortByName() {
+            people.sort((a, b) => a.name.localeCompare(b.name));
+            filterTable();
+        }
+
+        // Sort by Age
+        function sortByAge() {
+            people.sort((a, b) => a.age - b.age);
+            filterTable();
+        }
+    </script>
+
+
+</body>
+</html>

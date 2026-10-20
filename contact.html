@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div>
+            <img src="img/mmmmmm.jpeg"
+             alt="mokhtar" width="100" height="100">
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">contact </a>
+            <a href="components.html">components</a>
+            <a href="validation.html">validation</a>
+             <a href="data.html">data table</a>
+        </div>
+    </nav>
+        <!-- Start Contact section -->
+<section class="contact">
+    <h1>Contact Us</h1>
+    <p>Feel free to reach out to us!</p>
+
+    <form>
+        <!-- Input fields -->
+        <label for="username"><b>Name:</b></label><br>
+        <input type="text" id="username" name="username" placeholder="Your name"><br><br>
+
+        <label for="email"><b>Email:</b></label><br>
+        <input type="email" id="email" name="email" placeholder="Your email"><br><br>
+
+        <label for="number"><b>Number:</b></label><br>
+        <input type="tel" id="number" name="number" placeholder="Your phone number"><br><br>
+
+        <label for="date"><b>Date:</b></label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <!-- Gender section -->
+        <b>Select your gender:</b><br>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female"><br><br>
+
+        <!-- Skills section -->
+        <b>Any skills:</b><br>
+        <label for="html">HTML</label>
+        <input type="checkbox" id="html" name="skills" value="html">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="css" name="skills" value="css">
+        <label for="js">JavaScript</label>
+        <input type="checkbox" id="js" name="skills" value="javascript">
+        <label for="none">None</label>
+        <input type="checkbox" id="none" name="skills" value="none"><br><br>
+
+        <!-- Dropdown section -->
+        <label for="country"><b>Country:</b></label><br>
+        <select id="country" name="country">
+            <option value="egypt">Egypt</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+        </select><br><br>
+
+        <!-- Message section -->
+        <label for="message"><b>Message:</b></label><br>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+    
+</body>
+</html>

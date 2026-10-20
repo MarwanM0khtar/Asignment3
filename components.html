@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <nav class="navbar">
+        <div>
+            <img src="img/mmmmmm.jpeg"
+             alt="mokhtar" width="100" height="100">
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">contact </a>
+            <a href="components.html">components</a>
+            <a href="validation.html">validation</a>
+             <a href="data.html">data table</a>
+        </div>
+         </nav>
+        <!-- Component Library Container -->
+<section class="components-section">
+  
+  <!-- Form Elements -->
+  <div class="component-card">
+     <h3>Form Elements</h3>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country">
+          <option value="">Select country</option>
+          <option value="eg">Egypt</option>
+          <option value="us">United States</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+  <!-- Modal Window (CSS Only) -->
+  <div class="component-card">
+    <h3>Modal Window (CSS Only)</h3>
+    <a href="#open-modal" class="btn modal-trigger">Open Modal</a>
+     <div id="open-modal" class="modal-overlay">
+      <div class="modal-content">
+         <b>Modal Header</b>
+         <br><br>
+        <p>This modal is built entirely with CSS. No JavaScript involved!</p>
+        <a href="#" class="btn modal-close">Close</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert / Notification -->
+  <div class="component-card">
+    <h3>Alert / Notification</h3>
+    <div class="alert alert-success">
+      <strong>Success!</strong> Your changes have been saved successfully.
+    </div>
+  </div>
+</section>
+
+   
